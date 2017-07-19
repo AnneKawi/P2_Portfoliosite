@@ -137,6 +137,7 @@ h4 {
         margin: auto;
         margin-bottom: 20px;
     }
+
     .project_picture {
         padding: 10px;
         max-height: calc(100vw - 20px);
@@ -150,10 +151,14 @@ h4 {
         font-size: 14px;
     }
 
-    .project_view {flex-flow: row wrap; }
+    .project_view {
+        flex-flow: row wrap;
+    }
+
     article {
         max-width: 50%;
     }
+
     .project_picture {
         padding: 10px;
         max-height: calc(50vw - 10px);
@@ -181,6 +186,7 @@ h4 {
         margin: 5px;
         margin-bottom: 20px;
     }
+
     .project_picture {
         padding: 10px;
         max-height: calc(33vw - 10px);
