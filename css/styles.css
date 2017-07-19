@@ -1,0 +1,196 @@
+/*general rules*/
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #2d3c49;
+}
+
+img, embed, object, video {
+    max-width: 100%;
+}
+
+/*text-styling*/
+h1, h3, projectlink {
+    font-weight: 300;
+}
+
+h1, h2, h4 {
+    text-transform: uppercase;
+}
+
+
+/*individual-styling*/
+
+/*Header*/
+header {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    width: 20%;
+    max-width: 150px;
+}
+
+.name {
+    text-align: right;
+    max-width: 80%;
+    margin: 0;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+hr {
+    border-top: 3px solid #7d97ad;
+    margin: 5px 10px;
+}
+
+/*main body*/
+.mainpicture {
+    width: calc(100% - 20px);
+    max-height: 250px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #7d97ad;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+/*the projects*/
+.project_view {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 2em;
+    margin: 5px;
+}
+
+.projectlink {
+    margin: 0;
+}
+
+.rotate90 {
+    -webkit-transform: translateX(90%) rotate(-90deg); /* Safari */
+    -moz-transform: translateX(90%) rotate(-90deg); /* Firefox 3.6 Firefox 4 */
+    -ms-transform: translateX(90%) rotate(-90deg); /* IE9 */
+    -o-transform: translateX(90%) rotate(-90deg); /* Opera */
+    transform: translateX(90%) rotate(-90deg); /* W3C */
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+/* the media queries and according changes */
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 12px;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .name, h1, h2 {
+        margin: 0;
+    }
+
+    .project_view {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    article {
+        max-width: 100%;
+        height: calc(100vw + 50px);
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .project_picture {
+        padding: 10px;
+        max-height: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+    * {
+        font-size: 14px;
+    }
+
+    .project_view {flex-flow: row wrap; }
+    article {
+        max-width: 50%;
+    }
+    .project_picture {
+        padding: 10px;
+        max-height: calc(50vw - 10px);
+        max-width: calc(50vw - 10px);
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .mainpicture {
+        max-width: 1024px;
+        max-height: 400px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+        }
+
+    .project_view {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    article {
+        max-width: calc(33% - 10px);
+        max-height: calc(33% - 10px);
+        margin: 5px;
+        margin-bottom: 20px;
+    }
+    .project_picture {
+        padding: 10px;
+        max-height: calc(33vw - 10px);
+        max-width: calc(33vw - 10px);
+    }
+
+    h3 {
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        font-weight: 400;
+    }
+}
